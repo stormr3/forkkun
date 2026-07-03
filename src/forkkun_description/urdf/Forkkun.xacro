@@ -1,0 +1,169 @@
+<?xml version="1.0" ?>
+<robot name="Forkkun" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find Forkkun_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find Forkkun_description)/urdf/Forkkun.trans" />
+<xacro:include filename="$(find Forkkun_description)/urdf/Forkkun.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="0.07409839467536097 4.4381587475188695e-17 0.1936530825840086" rpy="0 0 0"/>
+    <mass value="6589.112852097612"/>
+    <inertia ixx="2595.179078" iyy="2407.750354" izz="1088.133581" ixy="-0.0" iyz="0.0" ixz="-4.918202"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Forkkun_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Forkkun_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin xyz="-1.249000902703301e-16 -5.551115123125783e-17 -2.220446049250313e-16" rpy="0 0 0"/>
+    <mass value="44.39070419522376"/>
+    <inertia ixx="0.273373" iyy="0.499395" izz="0.273373" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.075 0.3 0.36" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Forkkun_description)/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.075 0.3 0.36" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Forkkun_description)/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1">
+  <inertial>
+    <origin xyz="2.7755575615628914e-17 -1.1102230246251565e-16 -2.220446049250313e-16" rpy="0 0 0"/>
+    <mass value="44.39070419522377"/>
+    <inertia ixx="0.273373" iyy="0.499395" izz="0.273373" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.075 -0.3 0.36" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Forkkun_description)/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.075 -0.3 0.36" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Forkkun_description)/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_castor_1">
+  <inertial>
+    <origin xyz="6.661338147750939e-16 -1.6653345369377348e-16 -4.440892098500626e-16" rpy="0 0 0"/>
+    <mass value="3.156672298327024"/>
+    <inertia ixx="0.002946" iyy="0.002525" izz="0.002946" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-1.35 0.35 0.47" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Forkkun_description)/meshes/right_castor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-1.35 0.35 0.47" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Forkkun_description)/meshes/right_castor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_castor_1">
+  <inertial>
+    <origin xyz="0.0 2.220446049250313e-16 -1.1102230246251565e-16" rpy="0 0 0"/>
+    <mass value="3.156672298327024"/>
+    <inertia ixx="0.002946" iyy="0.002525" izz="0.002946" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-1.35 -0.35 0.47" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Forkkun_description)/meshes/left_castor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-1.35 -0.35 0.47" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Forkkun_description)/meshes/left_castor_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="carriage_1">
+  <inertial>
+    <origin xyz="0.20436377829820446 0.0 0.1555815768930523" rpy="0 0 0"/>
+    <mass value="134.07799999999997"/>
+    <inertia ixx="17.121697" iyy="14.906213" izz="25.366297" ixy="0.0" iyz="-0.0" ixz="3.422705"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.45 -0.0 0.44" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Forkkun_description)/meshes/carriage_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.45 -0.0 0.44" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find Forkkun_description)/meshes/carriage_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="right_drive" type="continuous">
+  <origin xyz="-0.075 -0.3 -0.36" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="left_drive" type="continuous">
+  <origin xyz="-0.075 0.3 -0.36" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="right_castor" type="continuous">
+  <origin xyz="1.35 -0.35 -0.47" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_castor_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="left_castor" type="continuous">
+  <origin xyz="1.35 0.35 -0.47" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_castor_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="carriage" type="prismatic">
+  <origin xyz="0.45 0.0 -0.44" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="carriage_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit upper="1.6" lower="0.0" effort="100" velocity="100"/>
+</joint>
+
+</robot>
