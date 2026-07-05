@@ -17,6 +17,7 @@ def generate_launch_description():
     xacro_file = os.path.join(share_dir,"urdf","Forkkun.xacro")
     robot_description_config = xacro.process_file(xacro_file)
     robot_urdf = robot_description_config.toxml()
+    controllers_file = os.path.join(share_dir, "config", "controllers.yaml")
 
     robot_state_publisher_node = Node(
         package="robot_state_publisher",

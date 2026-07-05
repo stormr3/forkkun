@@ -1,9 +1,10 @@
 <?xml version="1.0" ?>
 <robot name="Forkkun" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:include filename="$(find Forkkun_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find Forkkun_description)/urdf/Forkkun.trans" />
-<xacro:include filename="$(find Forkkun_description)/urdf/Forkkun.gazebo" />
+<xacro:include filename="$(find forkkun_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find forkkun_description)/urdf/Forkkun.trans" />
+<xacro:include filename="$(find forkkun_description)/urdf/Forkkun.gazebo" />
+<xacro:include filename="$(find forkkun_description)/urdf/Forkkun.ros2_control.xacro" />
 <link name="base_link">
   <inertial>
     <origin xyz="0.07409839467536097 4.4381587475188695e-17 0.1936530825840086" rpy="0 0 0"/>
@@ -13,14 +14,14 @@
   <visual>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Forkkun_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find forkkun_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Forkkun_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find forkkun_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -34,14 +35,14 @@
   <visual>
     <origin xyz="0.075 0.3 0.36" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Forkkun_description)/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find forkkun_description)/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.075 0.3 0.36" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Forkkun_description)/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find forkkun_description)/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -55,14 +56,14 @@
   <visual>
     <origin xyz="0.075 -0.3 0.36" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Forkkun_description)/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find forkkun_description)/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.075 -0.3 0.36" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Forkkun_description)/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find forkkun_description)/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -76,14 +77,14 @@
   <visual>
     <origin xyz="-1.35 0.35 0.47" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Forkkun_description)/meshes/right_castor_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find forkkun_description)/meshes/right_castor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-1.35 0.35 0.47" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Forkkun_description)/meshes/right_castor_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find forkkun_description)/meshes/right_castor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -97,14 +98,14 @@
   <visual>
     <origin xyz="-1.35 -0.35 0.47" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Forkkun_description)/meshes/left_castor_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find forkkun_description)/meshes/left_castor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-1.35 -0.35 0.47" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Forkkun_description)/meshes/left_castor_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find forkkun_description)/meshes/left_castor_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -118,14 +119,14 @@
   <visual>
     <origin xyz="-0.45 -0.0 0.44" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Forkkun_description)/meshes/carriage_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find forkkun_description)/meshes/carriage_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.45 -0.0 0.44" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find Forkkun_description)/meshes/carriage_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find forkkun_description)/meshes/carriage_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>

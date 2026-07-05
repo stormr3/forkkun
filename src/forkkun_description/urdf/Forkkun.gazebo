@@ -51,4 +51,14 @@
   <self_collide>true</self_collide>
 </gazebo>
 
+<gazebo>
+  <plugin
+      filename="gz_ros2_control-system"
+      name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+
+    <parameters>$(find forkkun_description)/config/controllers.yaml</parameters>
+
+  </plugin>
+</gazebo>
+
 </robot>
