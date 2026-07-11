@@ -10,7 +10,7 @@ controller_manager:
       type: diff_drive_controller/DiffDriveController
 
     carriage_controller:
-      type: velocity_controllers/JointGroupVelocityController
+      type: position_controllers/JointGroupPositionController
 
 
 #joint_state_broadcaster:

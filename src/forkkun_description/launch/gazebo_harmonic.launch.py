@@ -44,7 +44,8 @@ def generate_launch_description():
         executable="create",
         arguments=[
             "-topic", "robot_description",
-            "-name", "Forkkun"
+            "-name", "Forkkun",
+            "-z", "0.510"
         ],
         output="screen"
     )

@@ -160,11 +160,11 @@
 </joint>
 
 <joint name="carriage" type="prismatic">
-  <origin xyz="0.45 0.0 -0.44" rpy="0 0 0"/>
+  <origin xyz="0.45 0 0.44" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="carriage_1"/>
   <axis xyz="0.0 0.0 1.0"/>
-  <limit upper="1.6" lower="0.0" effort="100" velocity="100"/>
+  <limit upper="1.6" lower="0.0" effort="2500" velocity="100"/>
 </joint>
 
 </robot>
